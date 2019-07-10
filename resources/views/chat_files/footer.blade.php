@@ -5,7 +5,7 @@
 
 {{--{{ dd( app('router')->getRoutes()) }}--}}
 <script>
-    var domain_url =  "{{ str_replace(':8000','',URL::to('/') }}"
+    var domain_url =  "{{ str_replace(':8000','',URL::to('/')) }}"
     $.ajaxSetup({
         beforeSend: function() {
             console.log('test');
