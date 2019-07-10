@@ -71,7 +71,7 @@ $(document).ready(function () {
         var element = $(this).attr('element');
         list.push(element);
     });
-    var socket = io.connect("http://104.248.254.153:5000", {
+    var socket = io.connect(domain_url+":5000", {
         query: 'userid=' + userid + '&username=' + '&list=' + list.join(',')
     });
 

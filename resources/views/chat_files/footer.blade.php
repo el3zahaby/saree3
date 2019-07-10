@@ -1,8 +1,11 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 
 
+
+
 {{--{{ dd( app('router')->getRoutes()) }}--}}
 <script>
+    var domain_url =  "{{ str_replace(':8000','',URL::to('/') }}"
     $.ajaxSetup({
         beforeSend: function() {
             console.log('test');
@@ -25,7 +28,7 @@
         var element = $(this).attr('element');
         list.push(element);
     });
-    var socket = io.connect("http://104.248.254.153:5000",
+    var socket = io.connect(domain_url+":5000",
         {query: 'userid=' + userid + '&username=' + '&list=' + list.join(','),  'reconnection': true,
             'reconnectionDelay': 500,
             'reconnectionAttempts': 10});
