@@ -1,0 +1,38 @@
+/* 
+    * Hero Slider Style
+ */
+
+.hero-slider {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+
+.hero-slider .owl-item {
+    height: 100%;
+    position: relative;
+}
+.hero-slider .bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -99;
+}
+.hero-slider .item .overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.4);
+    padding: 25px;
+}
+
+.hero-slider .owl-stage {
+    height:400px;
+}
+.hero-slider .owl-nav {
+    display:none;
+}

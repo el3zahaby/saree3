@@ -1,0 +1,8 @@
+.product-list.grid .product-item .product-preview-actions {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 248px;
+    height: 150px;
+    overflow: hidden;
+}
