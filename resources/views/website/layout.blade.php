@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="{{ url('website/css/vendor/magnific-popup.css') }}">
     <!-- Font Icon -->
     <link rel="stylesheet" href="{{url('website/font-awesome/font-awesome.min.css')}}">
-    <script src="{{url('website/')}}/js/jquery.nicescroll.min.js"></script>
 
     <link rel="stylesheet" href="{{ url('website/css/style.css') }}">
     @stack('links')
@@ -1302,6 +1301,7 @@
 <script src="{{'website/'}}/js/alerts-demo.js"></script>
 <!-- Alerts Generator -->
 <script src="{{'website/'}}/js/alerts-generator.js"></script>
+    <script src="{{url('website/')}}/js/jquery.nicescroll.min.js"></script>
 
 
 <script>
