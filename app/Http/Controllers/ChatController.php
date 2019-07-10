@@ -517,12 +517,15 @@ class ChatController extends Controller
 ////            ->orWhere(['parent'=>$with,'child'=>Auth::id()])
 //        if($rooms->count() == 0):
         $theType = null;
+        $title = null;
         if ($type == 'serv'):
             $theType = Service::find($idofserv);
+            $title = "استفسار عن: ".$theType->name;
+
         elseif ($type == 'pro'):
             $theType = Product::find($idofserv);
+            $title = "استفسار عن: ".$theType->name_and_type;
         endif;
-        $title = "استفسار عن: ".$theType->name;
 //        dd($theType,$type,$with,$idofserv);
             $room = new rooms();
             $room->parent = Auth::id();

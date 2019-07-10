@@ -67,7 +67,9 @@
 					</ul>
 					<!-- /SHARE LINKS -->
 					<a href="#" class="button mid dark spaced">زيارةالملف الشخصي</a>
-					<a href="{{ route('chat.start',$product->user_id) }}" class="button mid dark-light">أرسل رسالة خاصة</a>
+					<a
+							href="{{ route('chat.start',['pro',$product->user_id,$product->products_id]) }}"
+							class="button mid dark-light">أرسل رسالة خاصة</a>
 				</div>
 				<!-- /SIDEBAR ITEM -->
 

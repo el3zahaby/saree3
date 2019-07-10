@@ -39,6 +39,7 @@
 
             <div dir="auto" id="contacts" class="">
                 <ul>
+{{--                    {{  }}--}}
                     @foreach($friends as $friend)
                         @if($friend->parent == Auth::user()->id)
 
@@ -49,7 +50,7 @@
                                     <img src="/images/avatars/{{$friend->get_user_info_child->image}}" alt="">
                                     <div class="meta">
                                         <p class="name">{{$friend->get_user_info_child->name}}</p>
-                                        <p class="preview">{{$room->title}}</p>
+                                        <p class="preview">{{$friend->title}}</p>
                                         <p class="preview last">{{$friend->get_last_message_by_type() ?? ""}}</p>
                                     </div>
                                 </div>
@@ -65,7 +66,7 @@
                                     <img src="/images/avatars/{{ $friend->get_user_info_parent->image }}" alt="">
                                     <div dir="auto" class="meta">
                                         <p class="name">{{$friend->get_user_info_parent->name}}</p>
-                                        <p class="preview">{{$room->title}}</p>
+                                        <p class="preview">{{$friend->title}}</p>
                                         <p class="preview last" >{{$friend->get_last_message_by_type() ?? ""}}</p>
                                     </div>
                                 </div>

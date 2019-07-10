@@ -170,7 +170,8 @@
 						<div class="clearfix"></div>
 						<a href="#" class="button mid dark spaced">الذهاب إلى <span class="primary">صفحة مقدم الخدمة </span></a>
 						<a
-                                href="{{ route('chat.start',['serv',$service->user_id,$service->services_id]) }}" class="button mid dark-light">تواصل معه</a>
+                                href="{{ route('chat.start',['serv',$service->user_id,$service->services_id]) }}"
+                                class="button mid dark-light">تواصل معه</a>
 					</div>
 					<!-- /SIDEBAR ITEM -->
 
