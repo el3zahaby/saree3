@@ -25,7 +25,7 @@
         var element = $(this).attr('element');
         list.push(element);
     });
-    var socket = io.connect("http://localhost:5000",
+    var socket = io.connect("http://104.248.254.153:5000",
         {query: 'userid=' + userid + '&username=' + '&list=' + list.join(','),  'reconnection': true,
             'reconnectionDelay': 500,
             'reconnectionAttempts': 10});
