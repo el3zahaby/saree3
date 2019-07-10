@@ -177,7 +177,7 @@ foreach (get_pages() as $item => $val) {
 
 
 
-Route::get('/chat/s/start/{with}/{idofserv}','ChatController@chat_start')->name('chat.start');
+Route::get('/chat/{type}/start/{with}/{id}','ChatController@chat_start')->name('chat.start');
 Route::post('/rooms/upload','ChatController@room_upload')->name('chat.upload');
 
 Route::get('/chat/rooms/{id}','ChatController@chat_view')->where('id','[1-9]+')->name('chat.view');

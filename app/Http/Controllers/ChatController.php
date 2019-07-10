@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Product;
+use App\Models\Service;
 use Illuminate\Http\Request;
 
 use Carbon\Carbon;
@@ -510,20 +512,27 @@ class ChatController extends Controller
     }
 
 
-    public function  chat_start($with,$idofserv){
+    public function  chat_start($type,$with,$idofserv){
 //        $rooms =rooms::where(['parent'=>Auth::id(),'child'=>$with]);
 ////            ->orWhere(['parent'=>$with,'child'=>Auth::id()])
 //        if($rooms->count() == 0):
-        $serv = S
-        dd($idofserv);
+        $theType = null;
+        if ($type == 'serv'):
+            $theType = Service::find($idofserv);
+        elseif ($type == 'pro'):
+            $theType = Product::find($idofserv);
+        endif;
+        $title = "استفسار عن: ".$theType->name;
+//        dd($theType,$type,$with,$idofserv);
             $room = new rooms();
             $room->parent = Auth::id();
             $room->child = $with;
+            $room->title = $title;
             $room->parentblock = false;
             $room->childblock = false;
             $room->save();
 //        else:
-            $room =$rooms->first();
+//            $room = $rooms->first();
 //        endif;
         return redirect()->to(route('chat.view',$room->id));
 

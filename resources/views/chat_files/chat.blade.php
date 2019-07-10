@@ -24,11 +24,11 @@
 {{--                    </div>--}}
                     <div id="expanded">
                         <label for="twitter"><i class="fab fa-facebook fa-fw" aria-hidden="true"></i></label>
-                        <input name="twitter" type="text" value="mikeross">
-                        <label for="twitter"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></label>
-                        <input name="twitter" type="text" value="ross81">
-                        <label for="twitter"><i class="fab fa-instagram fa-fw" aria-hidden="true"></i></label>
-                        <input name="twitter" type="text" value="mike.ross">
+                        <input name="twitter" type="text" value="El3zahaby">
+{{--                        <label for="twitter"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></label>--}}
+{{--                        <input name="twitter" type="text" value="ross81">--}}
+{{--                        <label for="twitter"><i class="fab fa-instagram fa-fw" aria-hidden="true"></i></label>--}}
+{{--                        <input name="twitter" type="text" value="mike.ross">--}}
                     </div>
                 </div>
             </div>
@@ -37,7 +37,7 @@
                 <input type="text" placeholder="Search contacts...">
             </div>
 
-            <div id="contacts" class="">
+            <div dir="auto" id="contacts" class="">
                 <ul>
                     @foreach($friends as $friend)
                         @if($friend->parent == Auth::user()->id)
@@ -49,7 +49,7 @@
                                     <img src="/images/avatars/{{$friend->get_user_info_child->image}}" alt="">
                                     <div class="meta">
                                         <p class="name">{{$friend->get_user_info_child->name}}</p>
-                                        <p class="preview">{{'jop title'}}</p>
+                                        <p class="preview">{{$room->title}}</p>
                                         <p class="preview last">{{$friend->get_last_message_by_type() ?? ""}}</p>
                                     </div>
                                 </div>
@@ -63,10 +63,10 @@
                                 <div class="wrap">
                                     <span class="contact-status offline"></span>
                                     <img src="/images/avatars/{{ $friend->get_user_info_parent->image }}" alt="">
-                                    <div class="meta">
+                                    <div dir="auto" class="meta">
                                         <p class="name">{{$friend->get_user_info_parent->name}}</p>
-                                        <p class="preview">{{'jop title'}}</p>
-                                        <p class="preview last">{{$friend->get_last_message_by_type() ?? ""}}</p>
+                                        <p class="preview">{{$room->title}}</p>
+                                        <p class="preview last" >{{$friend->get_last_message_by_type() ?? ""}}</p>
                                     </div>
                                 </div>
                             </li>
@@ -87,10 +87,10 @@
             <div class="contact-profile">
                 @if($room->parent == Auth::user()->id)
                     <img id="friend_image" src="/images/avatars/{{$room->get_user_info_child->image}}" alt="">
-                    <p>{{$room->get_user_info_child->name}} <span class="jobtitle">( {{'jop title'}} )</span></p>
+                    <p>{{$room->get_user_info_child->name}} <span dir="auto" class="jobtitle">( {{$room->title}} )</span></p>
                 @else
                     <img id="friend_image" src="/images/avatars/{{ $room->get_user_info_parent->image}}" alt="">
-                    <p>{{$room->get_user_info_parent->name}} <span class="jobtitle">( {{'jop title'}} )</span></p>
+                    <p>{{$room->get_user_info_parent->name}} <span dir="auto" class="jobtitle">( {{$room->title}} )</span></p>
                 @endif
 
 
