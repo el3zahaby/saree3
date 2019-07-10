@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
 
 
-    <meta name="viewpsentort" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 {{--    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.2/css/font-awesome.min.css'>--}}
     <link rel='stylesheet prefetch' href='{{ asset('css/fonts/fontawesome/all.css') }}'>

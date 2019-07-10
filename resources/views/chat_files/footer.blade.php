@@ -8,7 +8,7 @@
     var domain_url =  "{{ str_replace(':8000','',URL::to('/')) }}"
     $.ajaxSetup({
         beforeSend: function() {
-            console.log('test');
+
         },
         complete: function() {
             console.log('completed');
