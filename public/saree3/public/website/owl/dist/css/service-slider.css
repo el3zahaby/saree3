@@ -1,0 +1,92 @@
+
+.slider-services-down {
+    width: 100%;
+    height: 255px;
+    margin: auto;
+    margin-bottom: 26px;
+}
+
+.slider-services-down .owl-item {
+    height: 255px;
+    position: relative;
+}
+.slider-services-down .bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -99;
+}
+.slider-services-down .item .overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.4);
+    padding: 25px;
+}
+
+.slider-services-down .item .overlay h2 {
+
+}
+
+.slider-services-down .item .overlay p {
+    color : #fff;
+}
+
+.slider-services-down .owl-carousel .owl-item img {
+    height: 100% !important;
+}
+
+.slider-services-down .owl-dots {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: left;
+    padding: 12px;
+}
+
+
+.plus .owl-item  {
+    height: 400px;
+}
+
+.slider-services-down .owl-nav {
+    position: absolute;
+    top: 41%;
+    width: 100%;
+    padding: 0 16px;
+}
+.slider-services-down .owl-nav .owl-prev {
+    width: 50%;
+    float: right;
+    text-align: right;
+}
+
+
+.slider-services-down .owl-nav .owl-next {
+    width: 50%;
+    float: right;
+    text-align: left;
+}
+
+.slider-services-down .owl-nav .owl-next span , .slider-services-down .owl-nav .owl-prev span  {
+    /* color: #fff;
+    border: 1px solid #fff;
+    font-size: 21px;
+    border-radius: 50%;
+    padding-left: 11px;
+    padding-right: 9px;
+    padding-top: 6px;
+    padding-bottom: 8px; */
+    color: #fff;
+    font-size: 50px;
+}
+
+
+.slider-services .owl-nav {
+    display : none;
+}
