@@ -1191,7 +1191,7 @@
                 <ul class="link-list">
                     <li class="link-item">
                         <div class="bullet"></div>
-                        <a href="#">مركز المساعدة</a>
+                        <a href="{{ route('help.home') }}">مركز المساعدة</a>
                     </li>
                     <li class="link-item">
                         <div class="bullet"></div>

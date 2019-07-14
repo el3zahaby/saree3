@@ -1,18 +1,10 @@
 <?php
 
-    //////////////////////////////////////////////////////////////////// 
-    //                                                                 //   
-    //                 @ WEB SITE ROUTES FILE @                        //
-    //                   Version 1.0 By Ayoub                          //
-    //                                                                 //
-    ////////////////////////////////////////////////////////////////////
-
-
 Auth::routes();
 
 
 //Logout Of User
-Route::get('/logout','manageUsers@Logout');
+Route::get('/logout','manageUsers@Logout')->name('logout');
 
 // Login Staff
 Route::prefix('admin')->as('backend.')->group( function () {
@@ -28,6 +20,19 @@ Route::prefix('admin')->as('backend.')->group( function () {
     Route::get('password/reset/{token}', 'Backend\Auth\ResetPasswordController@showResetForm')->name('password.reset');
     Route::post('password/reset', 'Backend\Auth\ResetPasswordController@reset')->name('password.update');
 });
+
+
+// help route
+Route::prefix('help')->name('help.')->group(function () {
+    Route::get('/', 'HelpController@welcome')->name('home');
+    Route::get('/submit', 'HelpController@submit')->name('submit');
+    Route::post('/submit', 'HelpController@submit_post')->name('submit.post');
+    Route::post('/update/{id}', 'HelpController@update')->name('update');
+    Route::get('/list', 'HelpController@list')->name('list');
+    Route::get('/v/{id}', 'HelpController@single')->name('single');
+});
+
+
 
 /*
  *** Routes Pages Website
