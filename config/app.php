@@ -178,7 +178,7 @@ return [
 
 
         //////////////// My providers /////////////////
-        Gloudemans\Shoppingcart\ShoppingcartServiceProvider::class
+        El3zahaby\Shoppingcart\ShoppingcartServiceProvider::class
 
         //////////////////////////////////////////////
 
@@ -232,7 +232,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Location' => Stevebauman\Location\Facades\Location::class,
         ///////////////////  MY Iliass ////////////////////////
-        'Cart' => Gloudemans\Shoppingcart\Facades\Cart::class,
+        'Cart' => El3zahaby\Shoppingcart\Facades\Cart::class,
 
 
 
