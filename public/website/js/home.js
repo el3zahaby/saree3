@@ -7,8 +7,8 @@
 
 	var defaults = {
 		items: 5,
-		rtl : true
-	}
+
+	};
 
 	$(productCarousel_1).owlCarousel(defaults);
 	$(productCarousel_2).owlCarousel(defaults);

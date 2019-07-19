@@ -2442,10 +2442,9 @@ pre{padding:24px 20px;background-color:#f5f5f5;border:1px solid #ebebeb}
 /* Home Page Style */
 
 .search-bar-style {
-    position: absolute;
-    top: 546px;
-    left: 227px;
-    z-index:9999;
+    margin: 0 auto;
+    width: fit-content;
+    margin-top: 50px;
 }
 
 

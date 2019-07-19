@@ -1,6 +1,6 @@
 
 
-@extends('website.layout')
+@extends('layouts.website')
 
 @push('links')
 

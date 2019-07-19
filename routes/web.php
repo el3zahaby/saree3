@@ -3,6 +3,7 @@
 Auth::routes();
 
 
+
 //Logout Of User
 Route::get('/logout','manageUsers@Logout')->name('logout');
 
@@ -189,3 +190,21 @@ Route::get('/chat/rooms/{id}','ChatController@chat_view')->where('id','[1-9]+')-
 Route::post('/messages/add','ChatController@insert_messages')->name('chat.send');;
 Route::get('/rooms/block/{room_id}','ChatController@rooms_block');
 Route::post('/rooms/voices/upload','ChatController@room_voice_upload');
+
+
+
+//error image//
+
+$imagespaths = ['/website/images/items/{filename}','/uploads/services/{filename}','/uploads/{filename}','/website/images/{filename}'];
+
+foreach ($imagespaths as $path){
+    Route::get($path, function($filename) {
+
+        if (file_exists($filename)) return $filename;
+
+        return response( file_get_contents(public_path('images/placeholder.png')) )
+            ->header('Content-Type','image/png');
+
+    })->where('filename', '.*');;
+
+}

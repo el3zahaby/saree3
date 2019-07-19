@@ -1,0 +1,17 @@
+ /* #### Mobile Phones Portrait #### */
+ @media screen and (max-width: 630px) and (orientation: portrait){
+     #pl-1 .owl-item, #pl-2 .owl-item, #pl-3 .owl-item, #pl-4 .owl-item {
+         width: 280px !important;
+     }
+
+ }
+
+
+ @media screen and (max-width: 870px) {
+     .search-bar-style *{
+         width: 100% !important;
+     }
+
+ }
+
+

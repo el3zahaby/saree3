@@ -1,4 +1,4 @@
-@extends('website.layout')
+@extends('layouts.website')
 
 @push('links')
     <link rel="stylesheet" href="{{ url('website/css/flexslider.css') }}">

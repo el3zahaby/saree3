@@ -36,3 +36,10 @@
 .hero-slider .owl-nav {
     display:none;
 }
+.hero-slider .owl-stage {
+    width: 100% !important;
+}
+
+.owl-item.active{
+    width: 100% !important;
+}
