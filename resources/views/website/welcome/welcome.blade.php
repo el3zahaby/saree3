@@ -4,40 +4,50 @@
      <!-- css file -->
      <link rel="stylesheet" href="{{url('website/owl/')}}/vandors/owlcarousel/assets/owl.carousel.min.css">
      <link rel="stylesheet" href="{{url('website/owl/')}}/vandors/owlcarousel/assets/owl.theme.default.min.css">
-     <link rel="stylesheet" type="text/css" href="{{url('website/owl/')}}/dist/css/home-sliderv1.css" />
+
     <style>
+        .slick-slide {
+            display: none;
+            float: left;
+            height: 100%;
+            min-height: 1px;
+            padding: 3px;
+        }
+        .product-list.grid .product-item .product-preview-actions {
+            right: 0 !important;
+        }
         #pl-1 .owl-item , #pl-2 .owl-item , #pl-3 .owl-item ,  #pl-4 .owl-item {
-            width: 262px !important;
+            /*width: 262px !important;*/
             overflow: hidden;
             margin-right: 65px;
             margin-right: -28px;
             padding-right: 32px;
         }
         #pl-1 .product-list.grid .product-item .product-preview-actions , #pl-2 .product-list.grid .product-item .product-preview-actions , #pl-3 .product-list.grid .product-item .product-preview-actions , #pl-4 .product-list.grid .product-item .product-preview-actions{
-            width: 248px;
+            /*width: 248px;*/
         }
         #pl-1 .product-preview-image,  #pl-2 .product-preview-image ,#pl-3 .product-preview-image , #pl-4 .product-preview-image {
             width:100%;
         }
-        #pl-1.column4-wrap .column , #pl-2.column4-wrap .column , #pl-3.column4-wrap .column, #pl-4.column4-wrap .column {
-            width: 227px !important;
-            overflow: hidden;
-            height: 311px;
-        }
-        #pl-1  .product-preview-actions ,    #pl-2  .product-preview-actions , #pl-3  .product-preview-actions ,  #pl-4  .product-preview-actions {
-            width: 216px !important;
+        #pl-1 .product-preview-actions, #pl-2 .product-preview-actions, #pl-3 .product-preview-actions, #pl-4 .product-preview-actions {
+            width: 100% !important;
         }
         #pl-1.column4-wrap .column ,  #pl-2.column4-wrap .column ,  #pl-3.column4-wrap .column , #pl-4.column4-wrap .column {
-            width: 227px !important;
+            /*width: 227px !important;*/
             overflow: hidden;
             height: 311px;
         }
         #pl-1 .product-item , #pl-2 .product-item , #pl-3 .product-item , #pl-4 .product-item {
-            padding: 174px 20px 8px !important;
+            /*padding: 174px 20px 8px !important;*/
         }
         figure.product-preview-image.big {
             overflow: hidden;
-        }open-login-popup
+        }
+        .product-preview-image img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
     </style>
     <link rel="stylesheet" type="text/css" href="{{url('website/owl/')}}/dist/css/hero-slider.css" />
 @endpush
@@ -179,7 +189,7 @@
                 <h4>الخدمات</h4>
                 <!-- SLIDE CONTROLS -->
                 <div class="slide-control-wrap">
-                    <div class="slide-control left">
+                    <div class="slide-control prev-btn left">
                         <!-- SVG ARROW -->
                         <svg class="svg-arrow">
                             <use xlink:href="#svg-arrow"></use>
@@ -187,7 +197,7 @@
                         <!-- /SVG ARROW -->
                     </div>
 
-                    <div class="slide-control right">
+                    <div href="#" class="slide-control next-btn right">
                         <!-- SVG ARROW -->
                         <svg class="svg-arrow">
                             <use xlink:href="#svg-arrow"></use>
@@ -200,8 +210,222 @@
             <!-- /HEADLINE -->
 
             <!-- PRODUCT LIST -->
-            <div id="pl-1" class="product-list grid column4-wrap owl-carousel">
+            <div id="pl-1" class="product-list grid  ">
                 @foreach($services as $keys => $value)
+                <!-- PRODUCT ITEM -->
+                <div class="product-item column">
+                    <!-- PRODUCT PREVIEW ACTIONS -->
+                    <div class="product-preview-actions">
+                        <!-- PRODUCT PREVIEW IMAGE -->
+                        <figure class="product-preview-image">
+                            <img  src="{{url('uploads/services/'.get_services_imgs($value)[0]->img)}}" alt="{!! $value->services_name !!} ">
+                        </figure>
+                        <!-- /PRODUCT PREVIEW IMAGE -->
+
+                        <!-- PREVIEW ACTIONS -->
+                        <div class="preview-actions">
+                            <!-- PREVIEW ACTION -->
+                            <div class="preview-action">
+                                <a href="item-v1.html">
+                                    <div class="circle tiny primary">
+                                        <span class="icon-tag"></span>
+                                    </div>
+                                </a>
+                                <a href="{{url('services/'.$value->slug)}}">
+                                    <p>الذهاب للمنتج</p>
+                                </a>
+                            </div>
+                            <!-- /PREVIEW ACTION -->
+
+                            <!-- PREVIEW ACTION -->
+                            <div class="preview-action">
+                                <a href="#">
+                                    <div class="circle tiny secondary">
+                                        <span class="icon-heart"></span>
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <p>أضف للمفضلة</p>
+                                </a>
+                            </div>
+                            <!-- /PREVIEW ACTION -->
+                        </div>
+                        <!-- /PREVIEW ACTIONS -->
+                    </div>
+                    <!-- /PRODUCT PREVIEW ACTIONS -->
+
+                    <!-- PRODUCT INFO -->
+                    <div class="product-info">
+                        <a href="{{url('services/'.$value->slug)}}">
+                            <p class="text-header">{!! $value->services_name !!}</p>
+                        </a>
+                        <p class="product-description">{!! $value->services_desc !!} ...</p>
+                        <a href="shop-gridview-v1.html">
+                            <p class="category primary">{!! json_decode($value->section_name)->ar !!}</p>
+                        </a>
+                        <p class="price"><span>$</span>{!! $value->price !!}</p>
+                    </div>
+                    <!-- /PRODUCT INFO -->
+                    <hr class="line-separator">
+
+                    <!-- USER RATING -->
+                    <div class="user-rating">
+                        <a href="author-profile.html">
+                            <figure class="user-avatar small">
+                                <img src="{{url('images/avatars/'.$value->userimage)}}" alt="user-avatar">
+                            </figure>
+                        </a>
+                        <a href="author-profile.html">
+                            <p class="text-header tiny">{!! $value->user_name !!}</p>
+                        </a>
+                        <ul class="rating tooltip" title="التقييمات">
+                            <li class="rating-item">
+                                <!-- SVG STAR -->
+                                <svg class="svg-star">
+                                    <use xlink:href="#svg-star"></use>
+                                </svg>
+                                <!-- /SVG STAR -->
+                            </li>
+                            <li class="rating-item">
+                                <!-- SVG STAR -->
+                                <svg class="svg-star">
+                                    <use xlink:href="#svg-star"></use>
+                                </svg>
+                                <!-- /SVG STAR -->
+                            </li>
+                            <li class="rating-item">
+                                <!-- SVG STAR -->
+                                <svg class="svg-star">
+                                    <use xlink:href="#svg-star"></use>
+                                </svg>
+                                <!-- /SVG STAR -->
+                            </li>
+                            <li class="rating-item">
+                                <!-- SVG STAR -->
+                                <svg class="svg-star">
+                                    <use xlink:href="#svg-star"></use>
+                                </svg>
+                                <!-- /SVG STAR -->
+                            </li>
+                            <li class="rating-item empty">
+                                <!-- SVG STAR -->
+                                <svg class="svg-star">
+                                    <use xlink:href="#svg-star"></use>
+                                </svg>
+                                <!-- /SVG STAR -->
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- /USER RATING -->
+                </div>
+                <!-- /PRODUCT ITEM -->
+                <!-- PRODUCT ITEM -->
+                <div class="product-item column">
+                    <!-- PRODUCT PREVIEW ACTIONS -->
+                    <div class="product-preview-actions">
+                        <!-- PRODUCT PREVIEW IMAGE -->
+                        <figure class="product-preview-image">
+                            <img  src="{{url('uploads/services/'.get_services_imgs($value)[0]->img)}}" alt="{!! $value->services_name !!} ">
+                        </figure>
+                        <!-- /PRODUCT PREVIEW IMAGE -->
+
+                        <!-- PREVIEW ACTIONS -->
+                        <div class="preview-actions">
+                            <!-- PREVIEW ACTION -->
+                            <div class="preview-action">
+                                <a href="item-v1.html">
+                                    <div class="circle tiny primary">
+                                        <span class="icon-tag"></span>
+                                    </div>
+                                </a>
+                                <a href="{{url('services/'.$value->slug)}}">
+                                    <p>الذهاب للمنتج</p>
+                                </a>
+                            </div>
+                            <!-- /PREVIEW ACTION -->
+
+                            <!-- PREVIEW ACTION -->
+                            <div class="preview-action">
+                                <a href="#">
+                                    <div class="circle tiny secondary">
+                                        <span class="icon-heart"></span>
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <p>أضف للمفضلة</p>
+                                </a>
+                            </div>
+                            <!-- /PREVIEW ACTION -->
+                        </div>
+                        <!-- /PREVIEW ACTIONS -->
+                    </div>
+                    <!-- /PRODUCT PREVIEW ACTIONS -->
+
+                    <!-- PRODUCT INFO -->
+                    <div class="product-info">
+                        <a href="{{url('services/'.$value->slug)}}">
+                            <p class="text-header">{!! $value->services_name !!}</p>
+                        </a>
+                        <p class="product-description">{!! $value->services_desc !!} ...</p>
+                        <a href="shop-gridview-v1.html">
+                            <p class="category primary">{!! json_decode($value->section_name)->ar !!}</p>
+                        </a>
+                        <p class="price"><span>$</span>{!! $value->price !!}</p>
+                    </div>
+                    <!-- /PRODUCT INFO -->
+                    <hr class="line-separator">
+
+                    <!-- USER RATING -->
+                    <div class="user-rating">
+                        <a href="author-profile.html">
+                            <figure class="user-avatar small">
+                                <img src="{{url('images/avatars/'.$value->userimage)}}" alt="user-avatar">
+                            </figure>
+                        </a>
+                        <a href="author-profile.html">
+                            <p class="text-header tiny">{!! $value->user_name !!}</p>
+                        </a>
+                        <ul class="rating tooltip" title="التقييمات">
+                            <li class="rating-item">
+                                <!-- SVG STAR -->
+                                <svg class="svg-star">
+                                    <use xlink:href="#svg-star"></use>
+                                </svg>
+                                <!-- /SVG STAR -->
+                            </li>
+                            <li class="rating-item">
+                                <!-- SVG STAR -->
+                                <svg class="svg-star">
+                                    <use xlink:href="#svg-star"></use>
+                                </svg>
+                                <!-- /SVG STAR -->
+                            </li>
+                            <li class="rating-item">
+                                <!-- SVG STAR -->
+                                <svg class="svg-star">
+                                    <use xlink:href="#svg-star"></use>
+                                </svg>
+                                <!-- /SVG STAR -->
+                            </li>
+                            <li class="rating-item">
+                                <!-- SVG STAR -->
+                                <svg class="svg-star">
+                                    <use xlink:href="#svg-star"></use>
+                                </svg>
+                                <!-- /SVG STAR -->
+                            </li>
+                            <li class="rating-item empty">
+                                <!-- SVG STAR -->
+                                <svg class="svg-star">
+                                    <use xlink:href="#svg-star"></use>
+                                </svg>
+                                <!-- /SVG STAR -->
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- /USER RATING -->
+                </div>
+                <!-- /PRODUCT ITEM -->
                 <!-- PRODUCT ITEM -->
                 <div class="product-item column">
                     <!-- PRODUCT PREVIEW ACTIONS -->
@@ -346,7 +570,7 @@
             </div>
             <!-- /HEADLINE -->
             <!-- PRODUCT LIST -->
-            <div id="pl-4" class="product-list grid column4-wrap owl-carousel">
+            <div id="pl-2" class="product-list grid ">
 
                 @foreach ($products as $key => $value)
                 <!-- PRODUCT ITEM -->
@@ -504,20 +728,22 @@
             <div class="clearfix"></div>
 
             <!-- Start Slider -->
-            <div id="home-slider" class="owl-carousel slider-home-v1 plus" style="margin-top: 4px;height: 400px;">
+
+            <div class="slider m-5 single-item">
                 @forelse ($slider as $item => $value)
-                <div class="item">
-                    <div class="bg"><img src="{{url('uploads/sliders/'.$value->images)}}" alt=""></div>
-                    <div class="overlay">
-                        <h2>{!! $value->title !!}</h2>
-                        <p>{!! $value->body !!}</p>
+                    <div class="item">
+                        <div class="bg"><img src="{{url('uploads/sliders/'.$value->images)}}" alt=""></div>
+                        <div class="overlay">
+                            <h2>{!! $value->title !!}</h2>
+                            <p>{!! $value->body !!}</p>
+                        </div>
                     </div>
-                </div>
                 @empty
                     <p>no slider here</p>
                 @endempty
             </div>
             <!-- end Slider -->
+
 
             <div class="clearfix"></div>
 
@@ -871,4 +1097,5 @@
 
 <!-- home -->
 <script src="{{ url('website/js/home.js') }}"></script>
+
 @endpush

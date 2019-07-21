@@ -57,6 +57,9 @@ class HomeController extends Controller
      ** @updated_by : Abderrazzak oxa
      */
     public function showHomePage () {
+
+        return redirect()->to('/');
+        exit;
         $services       = get_allservices();
         $products       = get_all_products();
         $slider_top     = get_slider('home',7);

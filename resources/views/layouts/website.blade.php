@@ -8,11 +8,17 @@
 
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
 
+
+
     <link rel="stylesheet" href="{{ url('website/css/vendor/simple-line-icons.css') }}">
     <link rel="stylesheet" href="{{ url('website/css/vendor/tooltipster.css') }}">
     <link rel="stylesheet" href="{{ url('website/css/vendor/owl.carousel.css') }}">
     <link rel="stylesheet" href="{{ url('website/css/vendor/magnific-popup.css') }}">
 {{--    <link rel="stylesheet" href="{{ url('website/css/style.css') }}">--}}
+
+{{--    SLICK--}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css" />
 
     <!-- Font Icon -->
     <link rel="stylesheet" href="{{url('website/font-awesome/font-awesome.min.css')}}">
@@ -21,6 +27,19 @@
 
 
     <style>
+        .single-item img {
+            width: 100%;
+            object-fit: cover;
+            height: 400px;
+        }
+        .single-item .overlay {
+            position: absolute !important;
+            bottom: 6px;
+            margin: 11px;
+            background: rgba(0, 0, 0, 0.5490196078431373);
+            padding: 9px;
+            width: fit-content;
+        }
         .errors {
             color: #ff504e;
             font-size: 10px;
@@ -142,7 +161,6 @@
 
     <link rel="stylesheet" href="{{ url('css/ar.css') }}">
     <link rel="stylesheet" href="{{ url('css/responsive.css') }}">
-
 </head>
 <body>
 
@@ -1319,15 +1337,33 @@
 <script src="{{ url('website/js/vendor/jquery.magnific-popup.min.js') }}"></script>
 <!-- Side Menu -->
 <script src="{{ url('website/js/side-menu.js') }}"></script>
-<script src="{{ url('website/js/home.js') }}"></script>
 <!-- Tooltip -->
 <script src="{{ url('website/js/tooltip.js') }}"></script>
 <!-- User Quickview Dropdown -->
 <script src="{{ url('website/js/user-board.js') }}"></script>
+<!-- home Alerts -->
+<script src="{{ url('website/js/home-alerts.js') }}"></script>
 <!-- Footer -->
 <script src="{{ url('website/js/footer.js') }}"></script>
+<!-- Magnific Popup -->
+<script src="{{'website/'}}/js/vendor/jquery.magnific-popup.min.js"></script>
+
+<!-- Alerts Demo -->
+<script src="{{'website/'}}/js/alerts-demo.js"></script>
+<!-- Alerts Generator -->
+<script src="{{'website/'}}/js/alerts-generator.js"></script>
+<script src="{{url('website/')}}/js/jquery.nicescroll.min.js"></script>
 
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+<script>
+    $('.single-item').slick({
+        arrows:false,
+        autoplay:true
+    });
+
+
+</script>
 
 <script>
     $(document).ready(function () {
