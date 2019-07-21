@@ -43,10 +43,13 @@
         figure.product-preview-image.big {
             overflow: hidden;
         }
-        .product-preview-image img {
+        .product-preview-image img{
             width: 100%;
             height: 150px;
             object-fit: cover;
+        }
+        #pl-big .product-preview-actions {
+            width: 100% !important;
         }
     </style>
     <link rel="stylesheet" type="text/css" href="{{url('website/owl/')}}/dist/css/hero-slider.css" />
@@ -750,14 +753,18 @@
             <!-- PRODUCT SHOWCASE -->
 			<div class="product-showcase">
                     <!-- PRODUCT LIST -->
-                    <div class="product-list grid v4 column3-wrap">
+                    <div id="pl-big" class="product-list grid">
                         <!-- PRODUCT ITEM -->
                         <div class="product-item column">
+                            <!-- PIN -->
+                            <span class="pin featured">مميز</span>
+                            <!-- /PIN -->
+
                             <!-- PRODUCT PREVIEW ACTIONS -->
                             <div class="product-preview-actions">
                                 <!-- PRODUCT PREVIEW IMAGE -->
                                 <figure class="product-preview-image big">
-                                <img src="{{url('website/')}}/images/items/westeroshtml_m02.jpg" alt="product-image">
+                                    <img src="{{url('website/')}}/images/items/phantom_m02.jpg" alt="product-image">
                                 </figure>
                                 <!-- /PRODUCT PREVIEW IMAGE -->
 
@@ -796,12 +803,12 @@
                             <!-- PRODUCT INFO -->
                             <div class="product-info">
                                 <a href="item-v1.html">
-                                    <p class="text-header">Westeros HTML Custom Cloth...</p>
+                                    <p class="text-header">Phantom Cloud Illustration Shop</p>
                                 </a>
                                 <a href="shop-gridview-v1.html">
                                     <p class="category tiny primary">PSD Templates</p>
                                 </a>
-                                <p class="price big"><span>$</span>28</p>
+                                <p class="price big"><span>$</span>14</p>
                             </div>
                             <!-- /PRODUCT INFO -->
                             <hr class="line-separator">
@@ -810,11 +817,11 @@
                             <div class="user-rating">
                                 <a href="author-profile.html">
                                     <figure class="user-avatar small">
-                                        <img src="{{url('website/')}}/images/avatars/avatar_01.jpg" alt="user-avatar">
+                                        <img src="{{url('website/')}}/images/avatars/va.jpg" alt="user-avatar">
                                     </figure>
                                 </a>
                                 <a href="author-profile.html">
-                                    <p class="text-header tiny">Johnny Fisher</p>
+                                    <p class="text-header tiny">Odin_Design</p>
                                 </a>
                                 <ul class="rating tooltip" title="Author's Reputation">
                                     <li class="rating-item">
@@ -845,7 +852,7 @@
                                         </svg>
                                         <!-- /SVG STAR -->
                                     </li>
-                                    <li class="rating-item empty">
+                                    <li class="rating-item">
                                         <!-- SVG STAR -->
                                         <svg class="svg-star">
                                             <use xlink:href="#svg-star"></use>
@@ -857,14 +864,17 @@
                             <!-- /USER RATING -->
                         </div>
                         <!-- /PRODUCT ITEM -->
-
                         <!-- PRODUCT ITEM -->
                         <div class="product-item column">
+                            <!-- PIN -->
+                            <span class="pin featured">مميز</span>
+                            <!-- /PIN -->
+
                             <!-- PRODUCT PREVIEW ACTIONS -->
                             <div class="product-preview-actions">
                                 <!-- PRODUCT PREVIEW IMAGE -->
-                                <figure class="product-preview-image big" style=" overflow: hidden; ">
-                                    <img src="{{url('website/')}}/images/items/pixel_m02.jpg" alt="product-image">
+                                <figure class="product-preview-image big">
+                                    <img src="{{url('website/')}}/images/items/phantom_m02.jpg" alt="product-image">
                                 </figure>
                                 <!-- /PRODUCT PREVIEW IMAGE -->
 
@@ -903,12 +913,12 @@
                             <!-- PRODUCT INFO -->
                             <div class="product-info">
                                 <a href="item-v1.html">
-                                    <p class="text-header">Pixel Diamond Gaming Shop</p>
+                                    <p class="text-header">Phantom Cloud Illustration Shop</p>
                                 </a>
                                 <a href="shop-gridview-v1.html">
-                                    <p class="category tiny primary">Shopify</p>
+                                    <p class="category tiny primary">PSD Templates</p>
                                 </a>
-                                <p class="price big"><span>$</span>86</p>
+                                <p class="price big"><span>$</span>14</p>
                             </div>
                             <!-- /PRODUCT INFO -->
                             <hr class="line-separator">
@@ -917,11 +927,11 @@
                             <div class="user-rating">
                                 <a href="author-profile.html">
                                     <figure class="user-avatar small">
-                                        <img src="{{url('website/')}}/images/avatars/avatar_06.jpg" alt="user-avatar">
+                                        <img src="{{url('website/')}}/images/avatars/va.jpg" alt="user-avatar">
                                     </figure>
                                 </a>
                                 <a href="author-profile.html">
-                                    <p class="text-header tiny">Sarah-Imaginarium</p>
+                                    <p class="text-header tiny">Odin_Design</p>
                                 </a>
                                 <ul class="rating tooltip" title="Author's Reputation">
                                     <li class="rating-item">
@@ -952,7 +962,117 @@
                                         </svg>
                                         <!-- /SVG STAR -->
                                     </li>
-                                    <li class="rating-item empty">
+                                    <li class="rating-item">
+                                        <!-- SVG STAR -->
+                                        <svg class="svg-star">
+                                            <use xlink:href="#svg-star"></use>
+                                        </svg>
+                                        <!-- /SVG STAR -->
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- /USER RATING -->
+                        </div>
+                        <!-- /PRODUCT ITEM -->
+                        <!-- PRODUCT ITEM -->
+                        <div class="product-item column">
+                            <!-- PIN -->
+                            <span class="pin featured">مميز</span>
+                            <!-- /PIN -->
+
+                            <!-- PRODUCT PREVIEW ACTIONS -->
+                            <div class="product-preview-actions">
+                                <!-- PRODUCT PREVIEW IMAGE -->
+                                <figure class="product-preview-image big">
+                                    <img src="{{url('website/')}}/images/items/phantom_m02.jpg" alt="product-image">
+                                </figure>
+                                <!-- /PRODUCT PREVIEW IMAGE -->
+
+                                <!-- PREVIEW ACTIONS -->
+                                <div class="preview-actions">
+                                    <!-- PREVIEW ACTION -->
+                                    <div class="preview-action">
+                                        <a href="item-v1.html">
+                                            <div class="circle tiny primary">
+                                                <span class="icon-tag"></span>
+                                            </div>
+                                        </a>
+                                        <a href="item-v1.html">
+                                            <p>Go to Item</p>
+                                        </a>
+                                    </div>
+                                    <!-- /PREVIEW ACTION -->
+
+                                    <!-- PREVIEW ACTION -->
+                                    <div class="preview-action">
+                                        <a href="#">
+                                            <div class="circle tiny secondary">
+                                                <span class="icon-heart"></span>
+                                            </div>
+                                        </a>
+                                        <a href="#">
+                                            <p>Favourites +</p>
+                                        </a>
+                                    </div>
+                                    <!-- /PREVIEW ACTION -->
+                                </div>
+                                <!-- /PREVIEW ACTIONS -->
+                            </div>
+                            <!-- /PRODUCT PREVIEW ACTIONS -->
+
+                            <!-- PRODUCT INFO -->
+                            <div class="product-info">
+                                <a href="item-v1.html">
+                                    <p class="text-header">Phantom Cloud Illustration Shop</p>
+                                </a>
+                                <a href="shop-gridview-v1.html">
+                                    <p class="category tiny primary">PSD Templates</p>
+                                </a>
+                                <p class="price big"><span>$</span>14</p>
+                            </div>
+                            <!-- /PRODUCT INFO -->
+                            <hr class="line-separator">
+
+                            <!-- USER RATING -->
+                            <div class="user-rating">
+                                <a href="author-profile.html">
+                                    <figure class="user-avatar small">
+                                        <img src="{{url('website/')}}/images/avatars/va.jpg" alt="user-avatar">
+                                    </figure>
+                                </a>
+                                <a href="author-profile.html">
+                                    <p class="text-header tiny">Odin_Design</p>
+                                </a>
+                                <ul class="rating tooltip" title="Author's Reputation">
+                                    <li class="rating-item">
+                                        <!-- SVG STAR -->
+                                        <svg class="svg-star">
+                                            <use xlink:href="#svg-star"></use>
+                                        </svg>
+                                        <!-- /SVG STAR -->
+                                    </li>
+                                    <li class="rating-item">
+                                        <!-- SVG STAR -->
+                                        <svg class="svg-star">
+                                            <use xlink:href="#svg-star"></use>
+                                        </svg>
+                                        <!-- /SVG STAR -->
+                                    </li>
+                                    <li class="rating-item">
+                                        <!-- SVG STAR -->
+                                        <svg class="svg-star">
+                                            <use xlink:href="#svg-star"></use>
+                                        </svg>
+                                        <!-- /SVG STAR -->
+                                    </li>
+                                    <li class="rating-item">
+                                        <!-- SVG STAR -->
+                                        <svg class="svg-star">
+                                            <use xlink:href="#svg-star"></use>
+                                        </svg>
+                                        <!-- /SVG STAR -->
+                                    </li>
+                                    <li class="rating-item">
                                         <!-- SVG STAR -->
                                         <svg class="svg-star">
                                             <use xlink:href="#svg-star"></use>
@@ -1028,7 +1148,7 @@
                             <div class="user-rating">
                                 <a href="author-profile.html">
                                     <figure class="user-avatar small">
-                                        <img src="{{url('website/')}}/images/avatars/avatar_09.jpg" alt="user-avatar">
+                                        <img src="{{url('website/')}}/images/avatars/va.jpg" alt="user-avatar">
                                     </figure>
                                 </a>
                                 <a href="author-profile.html">

@@ -254,7 +254,7 @@ input[type=checkbox]:checked+label>span>span,input[type=radio]:checked+label>spa
 .rating .rating-item:last-child{margin-left:0}
 .product-preview-image{width:258px;height:150px}
 .product-preview-image.large{width:836px;height:484px}
-.product-preview-image.big{width:358px;height:208px}
+.product-preview-image.big{width:100%;height:208px}
 .product-preview-image.thumbnail{width:78px;height:78px}
 .product-preview-image.small{width:70px;height:70px}
 .product-preview-image.tiny{width:60px;height:60px}

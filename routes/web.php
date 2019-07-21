@@ -208,3 +208,14 @@ foreach ($imagespaths as $path){
     })->where('filename', '.*');;
 
 }
+Route::get("/images/avatars/{filename}", function($filename) {
+
+    if (file_exists($filename)) return $filename;
+
+    return response( file_get_contents(public_path('website/images/avatars/avatar_01.jpg')) )
+        ->header('Content-Type','image/png');
+
+})->where('filename', '.*');;
+
+
+
